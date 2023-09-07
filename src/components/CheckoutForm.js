@@ -116,6 +116,7 @@ function CheckoutForm() {
         >
           {paying ? "Processing..." : "Pay"}
         </Button>
+        <div className="mt-3 text-danger h3">This is demo payment, haven't done yet</div>
       </Form>
     </Col>
   );

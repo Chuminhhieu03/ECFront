@@ -1,5 +1,5 @@
 import { Elements } from "@stripe/react-stripe-js";
-// import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
 import { Alert, Col, Container, Row, Table } from "react-bootstrap";
 import { useSelector } from "react-redux";
@@ -7,7 +7,7 @@ import CheckoutForm from "../components/CheckoutForm";
 import { useIncreaseCartProductMutation, useDecreaseCartProductMutation, useRemoveFromCartMutation } from "../services/appApi";
 import "./CartPage.css";
 
-// const stripePromise = loadStripe("your_stripe_publishable_key");
+const stripePromise = loadStripe("your_stripe_publishable_key");
 
 function CartPage() {
     const user = useSelector((state) => state.user);
@@ -19,7 +19,7 @@ function CartPage() {
     const [removeFromCart, { isLoading }] = useRemoveFromCartMutation();
 
     function handleDecrease(product) {
-        const quantity = user.cart.count;
+        const quantity = user.cart[product.productId];
         if (quantity <= 0) return alert("Can't proceed");
         decreaseCart(product);
     }
@@ -32,7 +32,7 @@ function CartPage() {
                     {cart.length == 0 ? (
                         <Alert variant="info">Shopping cart is empty. Add products to your cart</Alert>
                     ) : (
-                        <Elements >
+                        <Elements stripe={stripePromise}>
                             <CheckoutForm />
                         </Elements>
                     )}

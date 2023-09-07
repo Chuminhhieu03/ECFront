@@ -56,7 +56,7 @@ function CategoryPage() {
       ) : (
         <Container>
           <Row>
-            <Col md={{ span: 10, offset: 1 }}>
+            <Col md={{ span: 10, offset: 1 }} className="d-flex">
               {productsSearch.map((product) => (
                 <ProductPreview {...product} />
               ))}

@@ -7,6 +7,10 @@ const categories = [
         name: "Phones",
         img: "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGhvbmV8ZW58MHx8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=800&q=60",
     },
+    {
+        name: "Tablets",
+        img: "https://hacom.vn/media/lib/05-05-2023/may-tinh-bang-la-gi-va-ung-dung-sau-luu-du-lieu.jpg",
+    },
 
     { name: "Laptops", img: "https://images.unsplash.com/photo-1575909812264-6902b55846ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" },
 ];

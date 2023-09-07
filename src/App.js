@@ -45,7 +45,10 @@ function App() {
                             { user.isAdmin && (
                                 <>
                                     <Route path="/admin" element={<AdminDashboard />} />
+                                    <Route path="/new-product" element={<NewProduct />} />
                                     <Route path="/products/:id/edit" element={<UpdateProduct />} />
+                                    <Route path="/products/:id" element={<ProductPage />} />
+                                    <Route path="/category/:category" element={<CategoryPage />} />
                                 </>
                             )}
 
