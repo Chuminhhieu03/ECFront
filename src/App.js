@@ -12,12 +12,10 @@ import { useDispatch, useSelector } from "react-redux";
 import ScrollToTop from "./components/ScrollToTop";
 import CartPage from "./pages/CartPage";
 import AdminDashboard from "./pages/AdminDashboard";
-import { useEffect } from "react";
 import UpdateProduct from "./pages/UpdateProduct";
 
 function App() {
     const user = useSelector((state) => state.user);
-    const dispatch = useDispatch();
     return (
         <div className="App">
             <BrowserRouter>

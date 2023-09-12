@@ -4,12 +4,11 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useDeleteProductMutation } from "../services/appApi";
 import "./DashboardProducts.css";
-import Pagination from "./Pagination";
 
 function DashboardProducts() {
     const products = useSelector(state => state.products)
     const user = useSelector(state => state.user)
-    const [deleteProduct, {isLoading}] = useDeleteProductMutation();
+    const [deleteProduct] = useDeleteProductMutation();
     function handleDelete(product_id){
         console.log(user._id + " " + product_id);
         if(window.confirm("Are you sure want to delete")){

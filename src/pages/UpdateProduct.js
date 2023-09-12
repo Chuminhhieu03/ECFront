@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Alert, Col, Container, Form, Row, Button } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import { useCreateProductMutation, useUpdateProductMutation } from "../services/appApi";
+import {  useUpdateProductMutation } from "../services/appApi";
 import axios from "../axios";
 import "./NewProduct.css";
 

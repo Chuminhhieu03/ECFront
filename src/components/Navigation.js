@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { logout, resetNotifications } from "../features/userSlice";
+import { logout} from "../features/userSlice";
 import "./Navigation.css";
 
 function Navigation() {

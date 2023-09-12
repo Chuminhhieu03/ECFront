@@ -9,7 +9,6 @@ function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
   const user = useSelector((state) => state.user);
-  const navigate = useNavigate();
   const [alertMessage, setAlertMessage] = useState("");
   const [createOrder, { isLoading, isError, isSuccess }] =
     useCreateOrderMutation();
